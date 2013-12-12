@@ -1,0 +1,11 @@
+.gradle
+.settings
+
+*/.settings/
+*/bin/
+*/build/
+
+*/.project
+*/.classpath
+
+client/db/tasks

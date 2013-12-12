@@ -1,0 +1,16 @@
+apply plugin: 'application'
+
+mainClassName = 'taskmeter.TaskMeterClientApplication'
+
+dependencies {
+	compile 'com.almworks.sqlite4java:sqlite4java:0.282'
+	compile 'com.google.guava:guava:15.0'
+
+	// jelenleg nem sikerül ezeket rátenni a java.library.path-ra így marad a kézi megoldás.
+	// runtime 'com.almworks.sqlite4java:sqlite4java-win32-x86:0.282'
+	// runtime 'com.almworks.sqlite4java:sqlite4java-win32-x64:0.282'
+}
+
+run {
+	systemProperty "java.library.path", 'native-libs'
+}
